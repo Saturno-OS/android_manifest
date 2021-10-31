@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project path="manifest" name="android_manifest" remote="saturn" />
+  <project path="build/make" name="android_build" remote="saturn" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/blueprint" name="android_build_blueprint" groups="pdk,tradefed" remote="saturn" />
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="saturn" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="art" name="android_art" remote="saturn" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="saturn" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="saturn" />
+
+  <!-- Device --> 
+  <project path="device/saturn/sepolicy" name="android_device_saturn_sepolicy" remote="saturn" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="saturn" />
+  <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy-legacy" remote="saturn" />
+  <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" remote="saturn" />
+  <project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="saturn" />
+  <project path="device/mediatek/sepolicy" name="android_device_mediatek_sepolicy" remote="saturn" />
+
+  <!-- External -->
+  <project path="external/selinux" name="android_external_selinux" remote="saturn" />
+  <project path="external/colorkt" name="android_external_colorkt" remote="saturn" />
+  <project path="external/themelib" name="android_external_themelib" remote="saturn" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="saturn" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="saturn" />
+  <project path="frameworks/libs/systemui" name="android_frameworks_libs_systemui" remote="saturn" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="saturn" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="saturn" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="saturn" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="saturn" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="saturn" />
+
+  <!-- Lib -->
+  <project path="libcore" name="android_libcore" remote="saturn" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="saturn" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="saturn" />
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="saturn" />
+  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="saturn" />
+  <project path="packages/apps/DocumentsUI" name="android_packages_apps_DocumentsUI" remote="saturn" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="saturn" />
+  <project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="saturn" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="saturn" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="saturn" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="saturn" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="saturn" />
+  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" remote="saturn" />
+  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity" remote="saturn" />
+  <project path="packages/providers/ContactsProvider" name="android_packages_providers_ContactsProvider" remote="saturn" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="saturn" />
+  <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" remote="saturn" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="saturn" />
+  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="saturn" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="saturn" />
+
+  <!-- Vendor -->
+  <project path="vendor/saturn" name="android_vendor_saturn" remote="saturn" />
+</manifest>
